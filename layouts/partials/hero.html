@@ -3,6 +3,11 @@
     <div class="header-content">
         <div class="header-content-inner">
             <h1>{{ with .Site.Params.hero.slogan }}{{ . }}{{ end }}</h1>
+            {{ with .Site.Params.hero.values }}
+            <hr>
+            <p>{{ delimit . " <i class=\"fa fa-arrow-circle-right wow bounceIn\"></i> " }}
+            </p>
+            {{ end }}
             <hr>
             <p>{{ with .Site.Params.hero.subtitle }}{{ . | markdownify }}{{ end }}</p>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ with .Site.Params.hero.buttonText }}{{ . }}{{ end }}</a>

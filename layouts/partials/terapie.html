@@ -1,0 +1,21 @@
+{{ "<!-- TERAPIE -->" | safeHTML }}
+<section id="terapie" class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+{{ with .Site.Params.terapie.headline }}
+<h2>{{ . }}</h2>
+<hr />
+{{ end }}
+    <div class="container">
+        <div class="row">
+            {{ range .Site.Params.terapie.list }}
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-star wow bounceIn text-primary"></i>
+                    <h3>{{ . }}</h3>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

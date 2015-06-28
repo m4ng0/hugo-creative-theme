@@ -7,14 +7,39 @@
                 <hr class="primary">
                 <p>{{ with .Site.Params.contact.description }}{{ . | markdownify }}{{ end }}</p>
             </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+            <div class="col-lg-2 col-lg-offset-2 text-center">
+                <i class="fa fa-mobile-phone fa-3x wow bounceIn"></i>
                 <p>{{ with .Site.Params.contact.phone }}{{ . }}{{ end }}</p>
             </div>
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-2 text-center">
                 <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                 <p><a href="mailto:{{ with .Site.Params.contact.email }}{{ . }}{{ end }}">{{ with .Site.Params.contact.email }}{{ . }}{{ end }}</a></p>
             </div>
+            {{ with .Site.Params.contact.googleplus }}
+            <div class="col-lg-2 text-center">
+                <i class="fa fa-google-plus fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a href="{{ . }}">Google+</a></p>
+            </div>
+            {{ end }}
+            {{ with .Site.Params.contact.facebook }}
+            <div class="col-lg-2 text-center">
+                <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a href="{{ . }}">Facebook</a></p>
+            </div>
+            {{ end }}
+            {{ with .Site.Params.contact.address }}
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <hr class="primary">
+                <p>{{ . }}</p>
+            </div>
+            {{ end }}
+            {{ with .Site.Params.contact.offers }}
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <hr class="primary">
+                <p>{{ .description | markdownify }}</p>
+                <img src="img/{{ .img }}" class="img-responsive img-centered" alt=".imgAlt">
+            </div>
+            {{ end }}
         </div>
     </div>
 </section>
