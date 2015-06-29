@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="{{ with .Site.Params.name }}{{ . }}{{ end }}">
 <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+{{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 {{ .Hugo.Generator }}
 <title>{{ .Site.Title }}</title>
 {{ "<!-- Bootstrap Core CSS -->" | safeHTML }}
