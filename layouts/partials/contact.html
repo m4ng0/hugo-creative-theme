@@ -8,19 +8,17 @@
                 <p>{{ with .Site.Params.contact.description }}{{ . | markdownify }}{{ end }}</p>
             </div>
             <div class="col-lg-2 col-lg-offset-2 text-center">
-                <i class="fa fa-mobile-phone fa-3x wow bounceIn"></i>
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
                 <p>{{ with .Site.Params.contact.phone }}{{ . }}{{ end }}</p>
+            </div>
+            <div class="col-lg-2 text-center">
+                <i class="fa fa-mobile-phone fa-3x wow bounceIn"></i>
+                <p>{{ with .Site.Params.contact.mobile }}{{ . }}{{ end }}</p>
             </div>
             <div class="col-lg-2 text-center">
                 <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                 <p><a href="mailto:{{ with .Site.Params.contact.email }}{{ . }}{{ end }}">{{ with .Site.Params.contact.email }}{{ . }}{{ end }}</a></p>
             </div>
-            {{ with .Site.Params.contact.googleplus }}
-            <div class="col-lg-2 text-center">
-                <i class="fa fa-google-plus fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p><a href="{{ . }}">Google+</a></p>
-            </div>
-            {{ end }}
             {{ with .Site.Params.contact.facebook }}
             <div class="col-lg-2 text-center">
                 <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".1s"></i>

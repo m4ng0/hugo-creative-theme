@@ -1,0 +1,24 @@
+{{ "<!-- HEADER -->" | safeHTML }}
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>{{ with .Site.Params.important.slogan }}{{ . }}{{ end }}</h1>
+            <hr>
+            <h3>{{ with .Site.Params.important.message }}{{ . | markdownify }}{{ end }}</h3>
+            <div class="container">
+                <div class="row">
+                    {{ range .Site.Params.important.list }}
+                    <div class="col-lg-2 col-md-6 text-center">
+                        <div class="service-box">
+                            <i class="fa fa-2x fa-check text-primary"></i>
+                            <h3>{{ . }}</h3>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <hr>
+            <h3>{{ with .Site.Params.important.contact }}{{ . | markdownify }}{{ end }}</h3>
+        </div>
+    </div>
+</header>
