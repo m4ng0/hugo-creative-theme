@@ -4,6 +4,10 @@
         <div class="header-content-inner">
             <h1>{{ with .Site.Params.important.slogan }}{{ . }}{{ end }}</h1>
             <hr>
+            {{ with .Site.Params.important.subtitle }}
+            <h2>{{ . | markdownify }}</h2>
+            <hr>
+            {{ end }}
             <h3>{{ with .Site.Params.important.message }}{{ . | markdownify }}{{ end }}</h3>
             <div class="container">
                 <div class="row">
